@@ -1,5 +1,7 @@
 """
+
 add BN on D and G
+
 """
 
 from __future__ import print_function
