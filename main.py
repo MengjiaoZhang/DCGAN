@@ -14,7 +14,7 @@ from Model import Generator, weights_init, Discriminator
 #from Model_v4 import Generator, weights_init, Discriminator
 from conf import Args
 # from train_with_flip_D import train
-from train_with_flip_G_D.py import train
+from train_with_flip_G_D import train
 # from train_without_flip.py import train
 
 from DataLoader import train_loader, test_loader
