@@ -13,9 +13,9 @@ from Model import Generator, weights_init, Discriminator
 # from Model_v3 import Generator, weights_init, Discriminator
 #from Model_v4 import Generator, weights_init, Discriminator
 from conf import Args
-# from train_with_flip_D import train
-from train_with_flip_G_D import train
-# from train_without_flip.py import train
+from train_with_flip_D import train as train1
+from train_with_flip_G_D import train as train2
+from train_without_flip.py import train as train3
 
 from DataLoader import train_loader, test_loader
 
@@ -31,6 +31,14 @@ import torchvision.utils as vutils
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+
+trains = {
+    'with_flip_G_D': train2,
+    'with_flip_D': train1,
+    'without_flip': train3
+}
+
+train = trains[Args.file_name]
 
 
 def show_train_hist(hist, show = False, save = False, path = 'Train_hist.png'):
@@ -106,6 +114,6 @@ if __name__ == "__main__":
 
     images = []
     for e in range(Args.num_epochs):
-        img_name = 'MNIST_DCGAN_results/Fixed_results/MNIST_DCGAN_' + str(e + 1) + '.png'
+        img_name = 'MNIST_DCGAN_results/Fixed_results/MNIST_DCGAN_' + Args.file_name +'_' + str(e + 1) + '.png'
         images.append(imageio.imread(img_name))
     imageio.mimsave('MNIST_DCGAN_results/generation_animation.gif', images, fps=5)

@@ -10,3 +10,6 @@ class Args:
     lr_D = 0.0001                     # Learning rate for optimizers D
     beta1 = 0.5                       # Beta1 hyperparam for Adam optimizers
     num_gpu = 1                       # Number of GPUs available. Use 0 for CPU mode.
+    file_name = 'with_flip_D'         # with_flip_G_D
+                                      # with_flip_D
+                                      # without_flip
