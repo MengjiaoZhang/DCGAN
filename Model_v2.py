@@ -1,5 +1,7 @@
 """
+
 Add dropout and BN on G
+
 """
 
 
