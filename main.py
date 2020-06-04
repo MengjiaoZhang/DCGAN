@@ -8,9 +8,9 @@ Model_4.py: add BN on D and G
 
 
 from __future__ import print_function
-from Model import Generator, weights_init, Discriminator
+# from Model import Generator, weights_init, Discriminator
 # from Model_v2 import Generator, weights_init, Discriminator
-# from Model_v3 import Generator, weights_init, Discriminator
+from Model_v3 import Generator, weights_init, Discriminator
 #from Model_v4 import Generator, weights_init, Discriminator
 from conf import Args
 from train_with_flip_D import train as train1

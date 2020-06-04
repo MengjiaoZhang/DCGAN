@@ -19,12 +19,12 @@ from conf import Args
 import os
 import matplotlib.pyplot as plt
 
-if not os.path.isdir('MNIST_DCGAN_results_D_SGD'):
-    os.mkdir('MNIST_DCGAN_results_D_SGD')
-if not os.path.isdir('MNIST_DCGAN_results_D_SGD/Random_results'):
-    os.mkdir('MNIST_DCGAN_results_D_SGD/Random_results')
-if not os.path.isdir('MNIST_DCGAN_results_D_SGD/Fixed_results'):
-    os.mkdir('MNIST_DCGAN_results_D_SGD/Fixed_results')
+if not os.path.isdir('MNIST_DCGAN_results'):
+    os.mkdir('MNIST_DCGAN_results')
+if not os.path.isdir('MNIST_DCGAN_results/Random_results'):
+    os.mkdir('MNIST_DCGAN_results/Random_results')
+if not os.path.isdir('MNIST_DCGAN_results/Fixed_results'):
+    os.mkdir('MNIST_DCGAN_results/Fixed_results')
 
 
 
