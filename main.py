@@ -105,15 +105,15 @@ if __name__ == "__main__":
 
     train_hist = train(netG, netD, optimizerD, optimizerG, train_loader, criterion, Args.num_epochs, device)
 
-    torch.save(netG.state_dict(), "MNIST_DCGAN_results/generator_param.pkl")
-    torch.save(netD.state_dict(), "MNIST_DCGAN_results/discriminator_param.pkl")
+    torch.save(netG.state_dict(), "MNIST_DCGAN_results/generator_param" + Args.file_name +"_" + ".pkl")
+    torch.save(netD.state_dict(), "MNIST_DCGAN_results/discriminator_param" + Args.file_name +"_" ".pkl")
     with open('MNIST_DCGAN_results/train_hist.pkl', 'wb') as f:
         pickle.dump(train_hist, f)
 
-    show_train_hist(train_hist, save=True, path='MNIST_DCGAN_results/MNIST_DCGAN_train_hist.png')
+    show_train_hist(train_hist, save=True, path="MNIST_DCGAN_results/MNIST_DCGAN_train_hist" + Args.file_name +"_" +".png")
 
     images = []
     for e in range(Args.num_epochs):
         img_name = 'MNIST_DCGAN_results/Fixed_results/MNIST_DCGAN_' + Args.file_name +'_' + str(e + 1) + '.png'
         images.append(imageio.imread(img_name))
-    imageio.mimsave('MNIST_DCGAN_results/generation_animation.gif', images, fps=5)
+    imageio.mimsave('MNIST_DCGAN_results/generation_animation_' + Args.file_name +'_' +'.gif', images, fps=5)
