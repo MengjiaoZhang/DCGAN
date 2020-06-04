@@ -1,6 +1,8 @@
 """
+
 add dropout on D 
 add BN on G
+
 """
 
 from __future__ import print_function
