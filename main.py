@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
     torch.save(netG.state_dict(), "MNIST_DCGAN_results/generator_param_" + Args.file_name +"_" + ".pkl")
     torch.save(netD.state_dict(), "MNIST_DCGAN_results/discriminator_param_" + Args.file_name +"_" +".pkl")
-    with open('MNIST_DCGAN_results/train_hist.pkl_' + Args.file_name +'_' + 'wb') as f:
+    with open('MNIST_DCGAN_results/train_hist.pkl_' + Args.file_name +'_','wb') as f:
         pickle.dump(train_hist, f)
 
     show_train_hist(train_hist, save=True, path="MNIST_DCGAN_results/MNIST_DCGAN_train_hist_" + Args.file_name +"_" +".png")
