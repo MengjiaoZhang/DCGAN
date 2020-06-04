@@ -165,8 +165,8 @@ def train(netG, netD, optimizerD, optimizerG, dataloader, criterion, num_epochs,
 
             iters += 1
 
-        p = 'MNIST_DCGAN_results_D_SGD/Random_results/MNIST_DCGAN_' + str(epoch + 1) + '.png'
-        fixed_p = 'MNIST_DCGAN_results_D_SGD/Fixed_results/MNIST_DCGAN_' + str(epoch + 1) + '.png'
+        p = 'MNIST_DCGAN_results_D_SGD/Random_results/MNIST_DCGAN_without_flip_' + str(epoch + 1) + '.png'
+        fixed_p = 'MNIST_DCGAN_results_D_SGD/Fixed_results/MNIST_DCGAN_without_flip_' + str(epoch + 1) + '.png'
         show_result((epoch + 1), save=True, path=p, isFix=False)
         show_result((epoch + 1), save=True, path=fixed_p, isFix=True)
 
