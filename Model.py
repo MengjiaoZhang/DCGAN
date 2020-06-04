@@ -1,4 +1,8 @@
-"""Add BN on G"""
+"""
+
+Add BN on G
+
+"""
 
 from __future__ import print_function
 import torch
